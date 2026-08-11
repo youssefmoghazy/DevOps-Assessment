@@ -1,2 +1,1 @@
-Task3/test-vm/.vagrant
-Task3/ubuntu-vm/.vagrant
+Task3/**/.vagrant/
