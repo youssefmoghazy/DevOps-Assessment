@@ -1,0 +1,14 @@
+docker volume create mssql-devops-data
+
+docker run -d \
+  --name sqlserver-devops \
+  -e ACCEPT_EULA=Y \
+  -e MSSQL_SA_PASSWORD='DevOps@2026#SecurePass' \
+  -e TZ='Africa/Cairo' \
+  -p 127.0.0.1:1433:1433 \
+  -v mssql-devops-data:/var/opt/mssql \
+  --restart unless-stopped \
+  mcr.microsoft.com/mssql/server:2022-latest
+
+
+
